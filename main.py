@@ -21,7 +21,7 @@ c.execute(statement)
 obj = open("courses.csv")
 d = csv.DictReader(obj)
 for k in d:
-    p = 'INSERT INTO courses VALUES ("' + k['code'] +  '", "' + k['mark'] +  '", "' + k['id'] + '" )'
+    p = 'INSERT INTO courses VALUES ("' + k['code'] +  '", "' + k['id'] + '", "' + k['mark']  + '" )'
     c.execute(p)
     db.commit()
 db.close()

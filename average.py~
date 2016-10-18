@@ -1,0 +1,10 @@
+import sqlite3
+import csv
+
+name = 'supreme-dollop.db'
+
+db = sqlite3.connect(name)
+c = db.cursor()
+
+statement = "SELECT id FROM students;"
+c.execute(statement)
